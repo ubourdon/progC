@@ -6,17 +6,9 @@
 *	Pour lancer le programme gcc misteryNumber.c -o nomDuFichierExecutable	*
 *********************************************************************************/
 
-void printGameIntro() {
-	printf("\n");
-        printf("Bienvenu dans le jeu du nombre mystère ! \n");
-        printf("Un nombre mystère a été choisi aléatoirement par l'ordinateur \n");
-        printf("Votre mission est de le retrouver \n");	
-}
+void printGameIntro();
 
-void printGameEnd(int number, int counter) {
-	printf("Bravo vous avez trouvé le nombre mystère ! : %d \n", number);
-        printf("Il vous à fallu %d coups pour trouver le résultat \n", counter);
-}
+void printGameEnd(int, int);
 
 int main() {
 	srand(time(NULL));	// initialise le générateur de nombres aléatoires
@@ -45,4 +37,16 @@ int main() {
 	printGameEnd(number, counter);
 
 	return 0;	
+}
+
+void printGameIntro() {
+        printf("\n");
+        printf("Bienvenu dans le jeu du nombre mystère ! \n");
+        printf("Un nombre mystère a été choisi aléatoirement par l'ordinateur \n");
+        printf("Votre mission est de le retrouver \n");
+}
+
+void printGameEnd(int number, int counter) {
+        printf("Bravo vous avez trouvé le nombre mystère ! : %d \n", number);
+        printf("Il vous à fallu %d coups pour trouver le résultat \n", counter);
 }
